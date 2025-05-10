@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eazy Barber - Read Me</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        h1, h2, h3 {
+            color: #444;
+        }
+        pre {
+            background: #eee;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            background: #f4f4f4;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+        ul {
+            margin: 10px 0;
+            padding: 0 20px;
+        }
+        a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        img {
+        width: 40%;
+        height: 40%;
+        
+        }
+    </style>
+</head>
+<body>
+    <h1>Eazy Barber</h1>
+    <p>Eazy Barber is a web-based salon management system that allows users to book appointments, manage time slots, and view their bookings. The project is designed to provide a seamless experience for both customers and administrators.</p>
+
+    <h2>Features</h2>
+    <h3>User Features</h3>
+    <ul>
+        <li><strong>Home Page:</strong> A welcoming interface with an option to book appointments.</li>
+        <li><strong>Register:</strong> Users can sign up with their name, contact number, email, and password.</li>
+        <li><strong>Login:</strong> Users can log in to access their personalized features.</li>
+        <li><strong>Book Appointment:</strong> Users can view available time slots and book an appointment.</li>
+        <li><strong>My Appointments:</strong> Users can view their booked appointments.</li>
+        <li><strong>Contact Us:</strong> Users can view the contact details of the salon.</li>
+    </ul>
+
+    <h3>Admin Features</h3>
+    <ul>
+        <li><strong>Admin Login:</strong> Admins can log in to access the admin panel.</li>
+        <li><strong>Admin Panel:</strong> Admins can navigate to manage slots or view customer details.</li>
+        <li><strong>Manage Slots:</strong> Admins can add new time slots and view all slots with their booking status and user details.</li>
+        <li><strong>Customer Details:</strong> Admins can view customer information and their appointments.</li>
+    </ul>
+
+    <h2>Project Structure</h2>
+    <h3>Frontend</h3>
+    <ul>
+        <li><strong>Pages:</strong>
+            <ul>
+                <li><code>index.php</code>: The home page with a hero section and navigation links.</li>
+                <li><img src="images/screencapture-localhost-eazy-baber-v2-frontend-index-php-2025-05-05-17_55_31.png"></li><br>
+                <li><code>register.php</code>: User registration page.</li>
+                <li><img src="images/screencapture-localhost-eazy-baber-v2-frontend-register-php-2025-05-05-17_56_08.png"></li><br>
+                <li><code>login.php</code>: User login page.</li>
+                <li><img src="images/screencapture-localhost-eazy-baber-v2-frontend-login-php-2025-05-05-17_56_22.png"></li><br>
+                <li><code>book.php</code>: Appointment booking page.</li>
+                <li><img src="images/screencapture-localhost-eazy-baber-v2-frontend-book-php-2025-05-05-18_02_06.png"></li><br>
+                <li><code>my_appointments.php</code>: Displays the user's booked appointments.</li>
+                <li><img src="images/screencapture-localhost-eazy-baber-v2-frontend-my-appointments-php-2025-05-05-18_02_40.png"></li><br>
+                <li><code>contact.php</code>: Contact information page.</li>
+                <li><img src="images/screencapture-localhost-eazy-baber-v2-frontend-contact-php-2025-05-05-17_55_53.png"></li><br>
+                <li><code>admin_login.php</code>: Admin login page.</li>
+                <li><img src="images/screencapture-localhost-eazy-baber-v2-frontend-admin-login-php-2025-05-05-18_03_00.png"></li><br>
+                <li><code>admin_panel.php</code>: Admin dashboard with navigation to manage slots and customer details.</li>
+                <li><img src="images/screencapture-localhost-eazy-baber-v2-frontend-admin-panel-php-2025-05-05-18_07_02.png"></li><br>
+                <li><code>manage_slots.php</code>: Admin page to manage time slots.</li>
+                <li><img src="images/screencapture-localhost-eazy-baber-v2-frontend-manage-slots-php-2025-05-05-18_01_04.png"></li><br>
+                <li><code>customer_details.php</code>: Admin page to view customer details.</li>
+                <li><img src="images/screencapture-localhost-eazy-baber-v2-frontend-customer-details-php-2025-05-05-18_03_17.png"></li><br>
+            </ul>
+        </li>
+        <li><strong>Assets:</strong>
+            <ul>
+                <li><code>css/style.css</code>: Custom styles for the project.</li>
+                <li><code>images/</code>: Contains images like the logo, background, and favicon.</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h2>Backend</h2>
+
+    <h3>Database Connection</h3>
+    <ul>
+        <li><strong><code>db.php</code></strong>: Handles the connection to the MySQL database.</li>
+    </ul>
+
+    <h3>API Endpoints</h3>
+    <ul>
+        <li><strong><code>get_slots.php</code></strong>: Provides available slots for booking.</li>
+        <li><strong><code>book_appointment.php</code></strong>: Handles appointment booking by checking slot availability and updating the database.</li>
+        <li><strong><code>my_appointments.php</code></strong>: Returns the list of appointments for a logged-in user in JSON format.</li>
+        <li><strong><code>login.php</code></strong>: Handles user login by verifying credentials and starting a session.</li>
+        <li><strong><code>register.php</code></strong>: Handles user registration by storing user details in the database.</li>
+    </ul>
+
+    <h3>Admin Management</h3>
+    <ul>
+        <li><strong><code>manage_slots.php</code></strong>: Allows admins to add new slots, delete slots (if not booked), and cancel appointments.</li>
+        <li><strong><code>get_customer_data.php</code></strong>: Fetches customer details (ID, name, email, and contact) for admin viewing.</li>
+    </ul>
+
+    <h2>Database Schema</h2>
+    <h3>Tables</h3>
+    <img src="images/Capture2.PNG" style="width:60%; height:30%;"><br>
+    <ul>
+        <li><strong>users</strong>
+            <ul>
+                <li><code>id</code>: Primary key.</li>
+                <li><code>name</code>: User's name.</li>
+                <li><code>contact</code>: User's contact number.</li>
+                <li><code>email</code>: User's email.</li>
+                <li><code>password</code>: User's hashed password.</li>
+                <img src="images/Capture1.PNG" style="width:60%; height:30%;"><br>
+            </ul>
+        </li>
+        <li><strong>time_slots</strong>
+            <ul>
+                <li><code>id</code>: Primary key.</li>
+                <li><code>slot_time</code>: Time of the slot.</li>
+                <li><code>slot_date</code>: Date of the slot.</li>
+                <li><code>is_booked</code>: Boolean indicating if the slot is booked.</li>
+                <img src="images/Screenshot (4302).png"><br>
+            </ul>
+        </li>
+        <li><strong>appointments</strong>
+            <ul>
+                <li><code>id</code>: Primary key.</li>
+                <li><code>slot_id</code>: Foreign key referencing <code>time_slots</code>.</li>
+                <li><code>user_id</code>: Foreign key referencing <code>users</code>.</li>
+                <li><code>booking_time</code>: Timestamp of the booking.</li>
+                <img src="images/Screenshot (4301).png"><br>
+            </ul>
+        </li>
+    </ul>
+
+    <h2>Optimization Strategies</h2>
+    <h3>Mobile Responsiveness</h3>
+    <ul>
+        <li> Bootstrap grid layout, for adapt to different screen sizes.</li>
+        <li> CSS media query to optimize the layout for mobile devices with a maximum screen width.</li>
+        <li> Viewport Tag for Ensure mobile-friendly.</li>
+    </ul>
+
+    <h3>Search Engine Optimization</h3>
+    <ul>
+        <li><strong>Title Tag :</strong>Short and descriptive title tags help search engines and users understand the content</li>
+        <img src="images/Capture4.PNG" style="width:60%; height:30%;"><br>
+        <li><strong>Meta Description :</strong> A more detailed summary offering insights into the page content, designed to appear in search engine results. Provides valuable information for both users and search engines, enhancing visibility and relevance.</li>
+        <img src="images/Capture3.PNG" style="width:60%; height:30%;"><br>
+        <li><strong>Meta Keywords :</strong> Relevant keywords that highlight your website's offerings. Enhances the visibility and searchability of each page.</li>
+        <img src="images/Capture4.PNG" style="width:60%; height:30%;"><br>
+    </ul>
+
+
+    <h2>Installation</h2>
+    <ol>
+        <li>Set up a local server (e.g., XAMPP or WAMP).</li>
+        <li>Place the project in the <code>htdocs</code> directory.</li>
+        <li>Import the database:
+            <ul>
+                <li>Open <code>phpMyAdmin</code>.</li>
+                <li>Import the provided SQL file (<code>eazy_barber.sql</code>).</li>
+            </ul>
+        </li>
+        <li>Update the database connection in <code>backend/db.php</code>:
+            <pre><code>$conn = new mysqli('localhost', 'root', '', 'eazy_barber');</code></pre>
+        </li>
+        <li>Start the server and access the project at <code>http://localhost/eazy_baber_v2/frontend/index.php</code>.</li>
+    </ol>
+
+    <h2>Usage</h2>
+    <h3>For Users</h3>
+    <ol>
+        <li>Register on the platform.</li>
+        <li>Log in using your credentials.</li>
+        <li>Book an appointment by selecting an available time slot.</li>
+        <li>View your bookings on the "My Appointments" page.</li>
+    </ol>
+
+    <h3>For Admins</h3>
+    <ol>
+        <li>Log in to the admin panel via the "Admin Login" page.</li>
+        <li>Navigate to "Manage Slots" to add or view time slots.</li>
+        <li>Navigate to "Customer Details" to view customer information and appointments.</li>
+    </ol>
+
+    <h2>Technologies Used</h2>
+    <ul>
+        <li><strong>Frontend:</strong> HTML, CSS, JavaScript, Bootstrap</li>
+        <li><strong>Backend:</strong> PHP</li>
+        <li><strong>Database:</strong> MySQL</li>
+    </ul>
+
+    <h2>Color Palette</h2>
+    <h3>Primary Colors</h3>
+    <ul>
+        <li><strong>Dark Gray:</strong> Header/Footer Background (<code>#333</code>)</li>
+        <li><strong>White:</strong> Text and Background (<code>#FFFFFF</code>)</li>
+        <li><strong>Light Gray:</strong> Body Background (<code>#F8F8F8</code>)</li>
+    </ul>
+
+    <h3>Accent Colors</h3>
+    <ul>
+        <li><strong>Green:</strong> Button Background (<code>#28A745</code>)</li>
+        <li><strong>Orange:</strong> Button Hover (<code>#F17F15</code>)</li>
+        <li><strong>Bright Red:</strong> Overlay Text (<code>rgb(255, 10, 10)</code>)</li>
+    </ul>
+
+    <h3>Footer Colors</h3>
+    <ul>
+        <li><strong>Dark Gray:</strong> Footer Background (<code>#222</code>)</li>
+        <li><strong>Light Gray:</strong> Separator Line (<code>#747070</code>)</li>
+    </ul>
+
+    <h3>Text Colors</h3>
+    <ul>
+        <li><strong>White:</strong> Footer Text and Links (<code>#FFFFFF</code>)</li>
+        <li><strong>Bright Red:</strong> Overlay Text (<code>rgb(255, 10, 10)</code>)</li>
+    </ul>
+
+    <h2>Contributors</h2>
+    <ul>
+        <li><a href="https://github.com/your-profile">Your Name</a></li>
+        <li>Other Contributors</li>
+    </ul>
+
+    <h2>Future Enhancements</h2>
+    <ul>
+        <li>Implement email notifications for bookings.</li>
+        <li>Add a dashboard for analytics and reporting.</li>
+        <li>Improve the UI/UX with modern design principles.</li>
+    </ul>
+</body>
+</html>
